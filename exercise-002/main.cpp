@@ -52,12 +52,12 @@ auto main(int argc, char **argv) -> int
  
     std::sort(data.begin(), data.end());
  
-    fmt::print("\nThe sorted vector:\n[{}]\n", fmt::join(data, ", "));
+    fmt::print("\nSorted vector:\n[{}]\n", fmt::join(data, ", "));
  
     auto end = std::chrono::system_clock::now();
     auto elapsed = end - start;
  
-    fmt::print("\nNeeded time to sort the vector:\n[{}]\n", elapsed);
+    fmt::print("\nTime to sort the vector:\n[{}]\n", elapsed);
  
     return 0; /* exit gracefully*/
 }
