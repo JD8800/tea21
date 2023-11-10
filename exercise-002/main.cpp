@@ -32,11 +32,11 @@ auto main(int argc, char **argv) -> int
      * it is much more convenient than std::cout and printf
      * More info at https://fmt.dev/latest/api.html
      */
-    fmt::print("Hello JD8800, {}!\n", app.get_name());
+    fmt::print("\nHello JD8800, {}!\n", app.get_name());
  
     /* INSERT YOUR CODE HERE */
      std::vector<int> data(count);
-    fmt::print("Created a vector with {} elements \n", count);
+    fmt::print("\nCreated a vector with {} elements \n", count);
  
     std::random_device rd;
     std::mt19937 gen(rd());
@@ -46,18 +46,18 @@ auto main(int argc, char **argv) -> int
         i = distrib(gen);
     }
  
-    fmt::print("The vector:\n[{}]\n", fmt::join(data, ", "));
+    fmt::print("\nThe vector:\n[{}]\n", fmt::join(data, ", "));
  
     auto start = std::chrono::system_clock::now();
  
     std::sort(data.begin(), data.end());
  
-    fmt::print("The sorted vector:\n[{}]\n", fmt::join(data, ", "));
+    fmt::print("\nThe sorted vector:\n[{}]\n", fmt::join(data, ", "));
  
     auto end = std::chrono::system_clock::now();
     auto elapsed = end - start;
  
-    fmt::print("Needed time to sort the vector:\n[{}]\n", elapsed);
+    fmt::print("\nNeeded time to sort the vector:\n[{}]\n", elapsed);
  
     return 0; /* exit gracefully*/
 }
